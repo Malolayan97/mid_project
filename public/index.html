@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
+	<title></title>
+	<link href="http://fonts.googleapis.com/css?family=Roboto:300,400,700|" rel="stylesheet" type="text/css">
+	<link href="fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="style.css">
+	<link rel="icon" type="image/png" href="/images/icon-marker@2x.png">
+
+
+</head>
+
+<body>
+	<div class="site-content">
+		<div class="site-header">
+			<div class="container">
+				<a href="index.html" class="branding">
+					<img src="/images/logo.png" alt="" class="logo">
+					<div class="logo-type"></div>
+				</a>
+				<!-- Navbar -->
+				<nav class="main-navigation">
+					<ul class="menu">
+						<li class="menu-item"><a href="#" id="loginBtn">Login</a></li>
+						<li class="menu-item"><a href="#" id="signupBtn">Signup</a></li>
+						<li class="menu-item" style="display: none;" id="usernameDisplay"></li>
+						<li class="menu-item"><a href="#" id="logoutBtn" style="display: none;">Logout</a></li>
+					</ul>
+					<button id="open-favorites-btn" style="display: none;">📍 مدنك المفضلة</button>
+				</nav>
+			</div>
+		</div>
+	</div>
+
+
+
+	<div class="search-container">
+		<button id="select-country-btn">🌍 اختر دولة</button>
+	  
+		<!-- البطاقة التي ستعرض الدول والمدن -->
+		<div id="country-card" class="card hidden">
+			<h2>إختر الدولة</h2>
+			<div id="country-list"></div>
+			<select id="country-select" style="display: none;"></select>
+			<select id="city-select" style="display: none;"></select>
+		</div>
+	  
+		<div class="find-location">
+			<form action="#" class="find-location-form">
+				<input type="text" id="weather-city-input" placeholder="Find your location...">
+				<input type="submit" value="Find">
+			</form>
+		</div>
+	</div>
+	
+
+
+	<div class="forecast-table">
+		<div class="container">
+			<div id="forecast-container" class="forecast-container">
+				<p id="loading" style="text-align: center;">جاري تحميل البيانات...</p>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- نافذة منبثقة (Modal) للمدن المفضلة -->
+	<div id="favorites-modal" class="modal">
+		<div class="modal-content">
+			<span class="close-btn" onclick="closeFavorites()">&times;</span>
+			<h2>📍 مدنك المفضلة</h2>
+			<ul id="favorites-list"></ul>
+			<input type="text" id="favorite-city-input" placeholder="أدخل اسم المدينة">
+			<button onclick="addFavorite()">➕ إضافة</button>
+		</div>
+	</div>
+
+	<!-- Modal for signin -->
+	<div id="signinModal" class="modal">
+		<div class="wrapper">
+			<span class="close">&times;</span>
+			<div class="title">Login</div>
+			<form action="#" class="login" id="loginForm">
+				<div class="field">
+					<input type="text" id="loginEmail" placeholder="Email Address" required>
+				</div>
+				<div class="field">
+					<input type="password" id="loginPassword" placeholder="Password" required>
+				</div>
+				<div class="field btn">
+					<input type="submit" value="Login">
+				</div>
+			</form>
+		</div>
+	</div>
+	<!-- Modal for signup -->
+	<div id="signupModal" class="modal">
+		<div class="wrapper">
+			<span class="close">&times;</span>
+			<div class="title">Sign up</div>
+			<form action="#" class="signup" id="signupForm">
+				<div class="field">
+					<input type="text" id="username" placeholder="Username" required>
+					<small class="error-message" id="usernameError"></small>
+				</div>
+				<div class="field">
+					<input type="text" id="email" placeholder="Email Address" required>
+					<small class="error-message" id="emailError"></small>
+				</div>
+				<div class="field">
+					<input type="password" id="password" placeholder="Password" required>
+					<small class="error-message" id="passwordError"></small>
+				</div>
+				<div class="field">
+					<input type="password" id="confirmPassword" placeholder="Confirm password" required>
+					<small class="error-message" id="confirmPasswordError"></small>
+				</div>
+				<div class="field btn">
+					<input type="submit" value="Signup">
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<script src="script.js"></script>
+	<script src="/js/jquery-1.11.1.min.js"></script>
+	<script src="/js/plugins.js"></script>
+	<script src="js/app.js"></script>
+	<script src="/js/app.js"></script>
+	<script src="app.js" defer></script>
+
+
+
+</body>
+
+</html>
