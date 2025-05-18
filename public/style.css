@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
 
 * {
@@ -32,10 +33,200 @@ body {
 .open-btn:hover {
     background: #0059b3;
     color: white;
+=======
+.search-container {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* توسيط العناصر */
+  gap: 10px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.find-location {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.find-location input[type="text"] {
+  width: 400px; /* تكبير شريط البحث */
+  padding: 15px 20px;
+  background: #dfdbdb;
+  color: rgb(0, 0, 0);
+  border-radius: 20px;
+  border: none;
+  font-size: 16px;
+}
+
+.find-location input[type="submit"] {
+  padding: 12px 30px;
+  background: #016DD9;
+  color: white;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+#select-country-btn {
+  height: 45px;
+  width: 140px;
+  border: none;
+  border-radius: 20px;
+  background: #016DD9;
+  font-size: 16px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+
+
+.card {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 350px;
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-height: 400px;
+  overflow-y: auto;
+  min-height: 150px;
+}
+
+.hidden {
+  display: none;
+}
+
+.country-item, .city-item {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 8px;
+  margin: 5px 0;
+  text-align: right;
+  background: #f1f1f1;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.country-item img {
+  width: 24px;
+  height: 16px;
+  margin-left: 8px;
+}
+
+.country-item:hover, .city-item:hover {
+  background: #ddd;
+}
+
+
+
+
+
+
+/* لتنسيق بطاقة المدن */
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    .modal-content {
+        background-color: #fff;
+        margin: 10% auto;
+        padding: 20px;
+        border-radius: 10px;
+        width: 350px;
+        text-align: center;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .close-btn {
+        float: right;
+        font-size: 22px;
+        cursor: pointer;
+    }
+
+    #open-favorites-btn {
+        background-color: #007bff;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    #open-favorites-btn:hover {
+        background-color: #0056b3;
+    }
+
+/* تنسيق عرض توقعات الطقس */
+.forecast-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+.forecast-card {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  width: 140px;
+  color: white;
+}
+
+.forecast-header {
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.forecast-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.day-section, .night-section {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.temp {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.desc {
+  font-size: 12px;
+>>>>>>> 454aa3e244e0a08f5f06df8800df184cf5ac67ed
 }
 
 /* 🔹 تصميم المودال */
 .modal {
+<<<<<<< HEAD
     display: none; /* إخفاء المودال افتراضيًا */
     position: fixed;
     top: 0;
@@ -48,17 +239,39 @@ body {
     visibility: hidden;
     opacity: 0;
     transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+=======
+  display: none; /* إخفاء المودال افتراضيًا */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+>>>>>>> 454aa3e244e0a08f5f06df8800df184cf5ac67ed
 }
 
 /* 🔹 عند فتح المودال */
 .modal.active {
+<<<<<<< HEAD
     display: flex;
     visibility: visible;
     opacity: 1;
+=======
+  display: flex;
+  visibility: visible;
+  opacity: 1;
+>>>>>>> 454aa3e244e0a08f5f06df8800df184cf5ac67ed
 }
 
 /* 🔹 تصميم البطاقة الداخلية */
 .wrapper {
+<<<<<<< HEAD
     background: white;
     padding: 30px;
     border-radius: 15px;
@@ -69,23 +282,47 @@ body {
     text-align: center;
     transform: scale(0.8);
     transition: transform 0.3s ease-in-out;
+=======
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 90%;
+  position: relative;
+  text-align: center;
+  transform: scale(0.8);
+  transition: transform 0.3s ease-in-out;
+>>>>>>> 454aa3e244e0a08f5f06df8800df184cf5ac67ed
 }
 
 /* عند فتح المودال، يتم تكبير العنصر */
 .modal.active .wrapper {
+<<<<<<< HEAD
     transform: scale(1);
+=======
+  transform: scale(1);
+>>>>>>> 454aa3e244e0a08f5f06df8800df184cf5ac67ed
 }
 
 /* 🔹 عنوان المودال */
 .title {
+<<<<<<< HEAD
     font-size: 30px;
     font-weight: 600;
     text-align: center;
     margin-bottom: 20px;
+=======
+  font-size: 30px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 20px;
+>>>>>>> 454aa3e244e0a08f5f06df8800df184cf5ac67ed
 }
 
 /* 🔹 الحقول */
 .field {
+<<<<<<< HEAD
     width: 100%;
     margin-top: 15px;
 }
@@ -101,10 +338,28 @@ body {
 
 .field input:focus {
     border-color: #1a75ff;
+=======
+  width: 100%;
+  margin-top: 15px;
+}
+
+.field input {
+  width: 100%;
+  height: 45px;
+  padding-left: 10px;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+.field input:focus {
+  border-color: #1a75ff;
+>>>>>>> 454aa3e244e0a08f5f06df8800df184cf5ac67ed
 }
 
 /* 🔹 رابط استعادة كلمة المرور */
 .pass-link {
+<<<<<<< HEAD
     margin-top: 10px;
     text-align: right;
 }
@@ -116,10 +371,24 @@ body {
 
 .pass-link a:hover {
     text-decoration: underline;
+=======
+  margin-top: 10px;
+  text-align: right;
+}
+
+.pass-link a {
+  text-decoration: none;
+  color: #1a75ff;
+}
+
+.pass-link a:hover {
+  text-decoration: underline;
+>>>>>>> 454aa3e244e0a08f5f06df8800df184cf5ac67ed
 }
 
 /* 🔹 زر الإرسال */
 .btn {
+<<<<<<< HEAD
     margin-top: 20px;
 }
 
@@ -137,10 +406,30 @@ body {
 
 .btn input:hover {
     opacity: 0.8;
+=======
+  margin-top: 20px;
+}
+
+.btn input {
+  width: 100%;
+  height: 45px;
+  background: linear-gradient(to right, #003366, #004080, #0059b3, #0073e6);
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn input:hover {
+  opacity: 0.8;
+>>>>>>> 454aa3e244e0a08f5f06df8800df184cf5ac67ed
 }
 
 /* 🔹 زر الإغلاق */
 .close {
+<<<<<<< HEAD
     position: absolute;
     top: 10px;
     right: 15px;
@@ -151,10 +440,23 @@ body {
 
 .close:hover {
     color: black;
+=======
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 25px;
+  cursor: pointer;
+  color: gray;
+}
+
+.close:hover {
+  color: black;
+>>>>>>> 454aa3e244e0a08f5f06df8800df184cf5ac67ed
 }
 
 /* 🔹 تحسين توافق الهاتف */
 @media (max-width: 500px) {
+<<<<<<< HEAD
     .wrapper {
         width: 90%;
         padding: 20px;
@@ -177,6 +479,84 @@ body {
 
 
 
+=======
+  .wrapper {
+      width: 90%;
+      padding: 20px;
+  }
+
+  .title {
+      font-size: 24px;
+  }
+
+  .field input {
+      height: 40px;
+      font-size: 14px;
+  }
+
+  .btn input {
+      height: 40px;
+      font-size: 16px;
+  }
+}
+
+/* 🔹 تصميم عرض الطقس */
+.weather-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  background: #1e1e30;
+  padding: 20px;
+  border-radius: 15px;
+  color: white;
+  width: 90%;
+  max-width: 900px;
+}
+
+.weather-header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px;
+  background: #121226;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.weather-main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.weather-card {
+  background: #252540;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  width: 130px;
+}
+
+.weather-card img {
+  width: 40px;
+  margin-bottom: 5px;
+}
+
+.weather-temp {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.weather-day {
+  font-size: 14px;
+  opacity: 0.7;
+}
+>>>>>>> 454aa3e244e0a08f5f06df8800df184cf5ac67ed
 
 
 
@@ -436,8 +816,13 @@ html {
 body {
   color: #bfc1c8;
   font-family: "Roboto", "Open Sans", sans-serif;
+<<<<<<< HEAD
   font-size: 14px;
   font-weight: 300;
+=======
+  font-size: 15px;
+  font-weight: 200;
+>>>>>>> 454aa3e244e0a08f5f06df8800df184cf5ac67ed
   line-height: 1.5;
   background: #1e202b;
 }
@@ -1920,6 +2305,7 @@ form input[type="reset"] {
 .hero {
   background-size: cover;
   padding: 70px 0;
+<<<<<<< HEAD
   min-height: 350px;
 }
 
@@ -1941,6 +2327,9 @@ form input[type="reset"] {
   right: 5px;
   bottom: 5px;
   padding: 0 40px;
+=======
+  min-height: 300px;
+>>>>>>> 454aa3e244e0a08f5f06df8800df184cf5ac67ed
 }
 
 .forecast-container {
@@ -1950,7 +2339,11 @@ form input[type="reset"] {
   table-layout: fixed;
   width: 100%;
   overflow: hidden;
+<<<<<<< HEAD
   border-radius: 10px;
+=======
+  border-radius: 20px;
+>>>>>>> 454aa3e244e0a08f5f06df8800df184cf5ac67ed
   margin-top: -150px;
   margin-bottom: 50px;
 }
